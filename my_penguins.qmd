@@ -31,4 +31,22 @@ penguins |>
   knitr::kable(digits = 1)
 ```
 
+
+
+```{r}
+#| label: bill-plot
+#| warning: false
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point(alpha = 0.8) +
+  labs(
+    title = "Bill length vs. bill depth",
+    x = "Bill length (mm)",
+    y = "Bill depth (mm)",
+    color = "Species"
+  ) +
+  theme_minimal()
+```
+
+
+
 The `echo: false` option disables the printing of code (only output is displayed).
